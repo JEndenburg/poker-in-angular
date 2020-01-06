@@ -1,0 +1,36 @@
+<h2>Dealer:</h2>
+<ul class="hand">
+    <li class="card" *ngFor="let card of playerHands[1].cards">
+        <span class="card-inner {{card.color}}">
+            {{card.type}} of {{card.house}}
+        </span>
+    </li>
+
+    <span class="result-text" *ngIf="!selectingPhase">
+        {{playerHands[1].ranking}}
+    </span>
+</ul>
+
+<h2>Your hand:</h2>
+<ul class="hand">
+    <li class="card player-card" *ngFor="let card of playerHands[0].cards"
+    [class.selected]="card.isSelected"
+    (click)="onSelect(card)"
+    >
+        <span class="card-inner {{card.color}}">
+            {{card.type}} of {{card.house}}
+        </span>
+    </li>
+
+    <span class="result-text" *ngIf="!selectingPhase">
+        {{playerHands[0].ranking}}
+    </span>
+</ul>
+
+<span class="result-text final" *ngIf="!selectingPhase">
+    {{playerWon ? "Player won!" : "Dealer won!"}}
+</span>
+
+<div id="actions">
+    <button (click)="redrawCards()" [disabled]="!selectingPhase">Next</button>
+</div>

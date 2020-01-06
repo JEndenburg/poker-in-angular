@@ -1,0 +1,48 @@
+:root
+{
+    --primary-color: rgb(187, 170, 173);
+    --secondary-color: rgb(236, 232, 255);
+
+    --primary-text-color: rgb(6, 9, 49);
+}
+
+*
+{
+    margin: 0;
+    color: var(--primary-text-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body
+{
+    background-color: var(--primary-color);
+}
+
+#app
+{
+    background-color: var(--secondary-color);
+    width: 67vw;
+    margin: auto;
+    padding: 0.7rem;
+    box-shadow: rgba(20, 20, 20, 0.5) 3px 3px 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1
+{
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.1);
+    padding: 0.2rem;
+    box-shadow: rgba(20, 20, 20, 0.2) 2px 2px 4px;
+    font-size: 2.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2
+{
+    text-align: center;
+    margin-top: 20px;
+}
